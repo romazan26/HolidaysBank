@@ -13,6 +13,7 @@
 		306438792A40D27E0069DE28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 306438772A40D27E0069DE28 /* Main.storyboard */; };
 		3064387B2A40D27F0069DE28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3064387A2A40D27F0069DE28 /* Assets.xcassets */; };
 		3064387E2A40D27F0069DE28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3064387C2A40D27F0069DE28 /* LaunchScreen.storyboard */; };
+		306438872A40D3830069DE28 /* Holiday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306438862A40D3830069DE28 /* Holiday.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		3064387A2A40D27F0069DE28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3064387D2A40D27F0069DE28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3064387F2A40D27F0069DE28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		306438862A40D3830069DE28 /* Holiday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Holiday.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,56 @@
 		306438702A40D27E0069DE28 /* HolidaysBank */ = {
 			isa = PBXGroup;
 			children = (
-				306438712A40D27E0069DE28 /* AppDelegate.swift */,
-				306438732A40D27E0069DE28 /* SceneDelegate.swift */,
-				306438752A40D27E0069DE28 /* ViewController.swift */,
-				306438772A40D27E0069DE28 /* Main.storyboard */,
-				3064387A2A40D27F0069DE28 /* Assets.xcassets */,
-				3064387C2A40D27F0069DE28 /* LaunchScreen.storyboard */,
-				3064387F2A40D27F0069DE28 /* Info.plist */,
+				3064388B2A40DA570069DE28 /* Resources */,
+				3064388A2A40DA400069DE28 /* StoryBoards */,
+				306438892A40DA2F0069DE28 /* ViewControllers */,
+				306438882A40DA150069DE28 /* App */,
+				306438852A40D2940069DE28 /* Models */,
 			);
 			path = HolidaysBank;
+			sourceTree = "<group>";
+		};
+		306438852A40D2940069DE28 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				306438862A40D3830069DE28 /* Holiday.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		306438882A40DA150069DE28 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				306438712A40D27E0069DE28 /* AppDelegate.swift */,
+				306438732A40D27E0069DE28 /* SceneDelegate.swift */,
+				3064387F2A40D27F0069DE28 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		306438892A40DA2F0069DE28 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				306438752A40D27E0069DE28 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3064388A2A40DA400069DE28 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				3064387C2A40D27F0069DE28 /* LaunchScreen.storyboard */,
+				306438772A40D27E0069DE28 /* Main.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		3064388B2A40DA570069DE28 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3064387A2A40D27F0069DE28 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +183,7 @@
 			files = (
 				306438762A40D27E0069DE28 /* ViewController.swift in Sources */,
 				306438722A40D27E0069DE28 /* AppDelegate.swift in Sources */,
+				306438872A40D3830069DE28 /* Holiday.swift in Sources */,
 				306438742A40D27E0069DE28 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,7 +333,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = AR6AN34RS9;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = HolidaysBank/Info.plist;
+				INFOPLIST_FILE = HolidaysBank/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -302,9 +346,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = home.HolidaysBank;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -317,7 +364,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = AR6AN34RS9;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = HolidaysBank/Info.plist;
+				INFOPLIST_FILE = HolidaysBank/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -330,9 +377,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = home.HolidaysBank;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
