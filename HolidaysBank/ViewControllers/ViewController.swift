@@ -15,7 +15,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         fetchHoliday()
     }
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let holidayCVC = segue.destination as? HolidayCollectionViewController else {return}
+        holidayCVC.holidays = holidays
+    }
+    
 
 }
 extension ViewController {
@@ -28,7 +32,6 @@ extension ViewController {
             do {
                 let decoder = JSONDecoder()
                 self.holidays = try decoder.decode([Holiday].self, from: data)
-                print(self.holidays!)
             } catch {
                 print(error.localizedDescription)
                 
