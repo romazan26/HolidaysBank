@@ -9,8 +9,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    let url = URL(string: "https://date.nager.at/api/v2/publicholidays/2020/US")!
-    var holidays: [Holiday]!
+    var holidays: [Holiday] = []
+    private let networkManager = NetworkManager.shared
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchHoliday()
@@ -24,18 +25,15 @@ class ViewController: UIViewController {
 }
 extension ViewController {
     private func fetchHoliday() {
-        URLSession.shared.dataTask(with: url) { data, respone, error in
-            guard let data else {
-                print(error ?? "No error description")
-                return
+        networkManager.fetch([Holiday].self, from: Link.holidayURL.url) { [weak self] result in
+            switch result {
+            case .success( let holidaysys):
+                self?.holidays = holidaysys
+            case .failure(let error):
+                print(error)
+           
             }
-            do {
-                let decoder = JSONDecoder()
-                self.holidays = try decoder.decode([Holiday].self, from: data)
-            } catch {
-                print(error.localizedDescription)
-                
-            }
-        }.resume()
+        }
+        
     }
 }

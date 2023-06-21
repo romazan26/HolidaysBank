@@ -57,11 +57,11 @@
                                     <rect key="frame" x="0.0" y="0.0" width="340" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ov-vg-D4H">
-                                            <rect key="frame" x="149.33333333333334" y="40" width="41.333333333333343" height="20.333333333333329"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ov-vg-D4H">
+                                            <rect key="frame" x="146.33333333333334" y="38" width="47.666666666666657" height="24"/>
+                                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="22"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </label>
                                     </subviews>
                                     <constraints>
@@ -70,6 +70,11 @@
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <color key="backgroundColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="Label" destination="2Ov-vg-D4H" id="716-Wa-4cM"/>
                                 </connections>
@@ -81,10 +86,29 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="S5g-wK-hcj"/>
+                    <connections>
+                        <segue destination="CRi-Wj-4Zq" kind="show" identifier="holidayInfo" id="1lP-n4-uqG"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pEN-dq-wtF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="835.87786259541986" y="-2.1126760563380285"/>
+        </scene>
+        <!--Info Holiday View Controller-->
+        <scene sceneID="rpZ-xM-EqE">
+            <objects>
+                <viewController id="CRi-Wj-4Zq" customClass="InfoHolidayViewController" customModule="HolidaysBank" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GJa-DS-cGU">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="QBv-xP-oAe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8Hg-B4-r29"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xCt-QA-czE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1657" y="-2"/>
         </scene>
     </scenes>
     <resources>

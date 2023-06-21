@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3042AD022A41BCB7004174A0 /* HolidayCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3042AD012A41BCB7004174A0 /* HolidayCollectionViewController.swift */; };
 		3042AD052A41C2F4004174A0 /* HolidayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3042AD042A41C2F4004174A0 /* HolidayCell.swift */; };
+		3042AD082A435629004174A0 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3042AD072A435629004174A0 /* NetworkManager.swift */; };
+		3042AD0A2A4361FA004174A0 /* InfoHolidayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3042AD092A4361FA004174A0 /* InfoHolidayViewController.swift */; };
 		306438722A40D27E0069DE28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306438712A40D27E0069DE28 /* AppDelegate.swift */; };
 		306438742A40D27E0069DE28 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306438732A40D27E0069DE28 /* SceneDelegate.swift */; };
 		306438762A40D27E0069DE28 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306438752A40D27E0069DE28 /* ViewController.swift */; };
@@ -21,6 +23,8 @@
 /* Begin PBXFileReference section */
 		3042AD012A41BCB7004174A0 /* HolidayCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayCollectionViewController.swift; sourceTree = "<group>"; };
 		3042AD042A41C2F4004174A0 /* HolidayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayCell.swift; sourceTree = "<group>"; };
+		3042AD072A435629004174A0 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		3042AD092A4361FA004174A0 /* InfoHolidayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoHolidayViewController.swift; sourceTree = "<group>"; };
 		3064386E2A40D27E0069DE28 /* HolidaysBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HolidaysBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		306438712A40D27E0069DE28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		306438732A40D27E0069DE28 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +55,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		3042AD062A4355E9004174A0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3042AD072A435629004174A0 /* NetworkManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		306438652A40D27E0069DE28 = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +82,7 @@
 		306438702A40D27E0069DE28 /* HolidaysBank */ = {
 			isa = PBXGroup;
 			children = (
+				3042AD062A4355E9004174A0 /* Services */,
 				3042AD032A41C2AB004174A0 /* View */,
 				3064388B2A40DA570069DE28 /* Resources */,
 				3064388A2A40DA400069DE28 /* StoryBoards */,
@@ -103,6 +116,7 @@
 			children = (
 				306438752A40D27E0069DE28 /* ViewController.swift */,
 				3042AD012A41BCB7004174A0 /* HolidayCollectionViewController.swift */,
+				3042AD092A4361FA004174A0 /* InfoHolidayViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -198,9 +212,11 @@
 				306438762A40D27E0069DE28 /* ViewController.swift in Sources */,
 				306438722A40D27E0069DE28 /* AppDelegate.swift in Sources */,
 				3042AD052A41C2F4004174A0 /* HolidayCell.swift in Sources */,
+				3042AD082A435629004174A0 /* NetworkManager.swift in Sources */,
 				3042AD022A41BCB7004174A0 /* HolidayCollectionViewController.swift in Sources */,
 				306438872A40D3830069DE28 /* Holiday.swift in Sources */,
 				306438742A40D27E0069DE28 /* SceneDelegate.swift in Sources */,
+				3042AD0A2A4361FA004174A0 /* InfoHolidayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
