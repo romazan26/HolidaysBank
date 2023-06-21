@@ -9,8 +9,7 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-
-class HolidayCollectionViewController: UICollectionViewController {
+final class HolidayCollectionViewController: UICollectionViewController {
     
     var holidays: [Holiday]!
     
@@ -18,8 +17,6 @@ class HolidayCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
 
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
-        
     }
 
     // MARK: - Navigation
@@ -34,7 +31,6 @@ class HolidayCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         holidays.count
-        
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -50,6 +46,7 @@ class HolidayCollectionViewController: UICollectionViewController {
     }
 
 }
+// MARK: extension HolidayCollectionViewController
 extension HolidayCollectionViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,

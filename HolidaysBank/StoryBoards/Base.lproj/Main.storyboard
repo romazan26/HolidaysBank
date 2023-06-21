@@ -101,14 +101,31 @@
                     <view key="view" contentMode="scaleToFill" id="GJa-DS-cGU">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G4v-LY-1BD">
+                                <rect key="frame" x="20" y="409" width="353" height="24"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="QBv-xP-oAe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="G4v-LY-1BD" firstAttribute="centerY" secondItem="GJa-DS-cGU" secondAttribute="centerY" id="1aa-R2-as7"/>
+                            <constraint firstItem="G4v-LY-1BD" firstAttribute="leading" secondItem="QBv-xP-oAe" secondAttribute="leading" constant="20" id="H0z-VN-3tg"/>
+                            <constraint firstItem="QBv-xP-oAe" firstAttribute="trailing" secondItem="G4v-LY-1BD" secondAttribute="trailing" constant="20" id="NtB-TI-Ze7"/>
+                            <constraint firstItem="G4v-LY-1BD" firstAttribute="centerX" secondItem="GJa-DS-cGU" secondAttribute="centerX" id="qyn-ia-g1l"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8Hg-B4-r29"/>
+                    <connections>
+                        <outlet property="infoHolidayLabel" destination="G4v-LY-1BD" id="8Ep-t5-r2A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xCt-QA-czE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1657" y="-2"/>
+            <point key="canvasLocation" x="1655.7251908396945" y="-2.1126760563380285"/>
         </scene>
     </scenes>
     <resources>
