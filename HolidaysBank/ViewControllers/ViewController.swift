@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
 
     var holidays: [Holiday] = []
     private let networkManager = NetworkManager.shared

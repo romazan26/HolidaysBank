@@ -12,11 +12,12 @@ private let reuseIdentifier = "Cell"
 final class HolidayCollectionViewController: UICollectionViewController {
     
     var holidays: [Holiday]!
+    var holidayNames: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        
     }
 
     // MARK: - Navigation

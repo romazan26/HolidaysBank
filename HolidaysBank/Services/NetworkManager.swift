@@ -9,11 +9,14 @@ import Foundation
 
 enum Link {
     case holidayURL
+    case newYearURL
     
     var url: URL {
         switch self {
         case .holidayURL:
             return URL(string: "https://date.nager.at/api/v2/publicholidays/2020/US")!
+        case .newYearURL:
+            return URL(string: "https://balashover.ru/picture/news/40228_b12b7fae66a4c6fd169cf536c8457f48.png")!
         }
     }
 }
@@ -39,7 +42,6 @@ final class NetworkManager {
             
             do {
                 let decoder = JSONDecoder()
-                decoder.keyDecodingStrategy = .convertFromSnakeCase
                 let dataModel = try decoder.decode(T.self, from: data)
                 DispatchQueue.main.async {
                     completion(.success(dataModel))
@@ -49,5 +51,17 @@ final class NetworkManager {
             }
             
         }.resume()
+    }
+    func fetchImage(from url: URL, completion: @escaping(Result<Data, NetworkError>) -> Void) {
+        
+        DispatchQueue.global().async {
+            guard let imageData = try? Data(contentsOf: url) else {
+                completion(.failure(.noData))
+                return
+            }
+            DispatchQueue.main.async {
+                completion(.success(imageData))
+            }
+        }
     }
 }

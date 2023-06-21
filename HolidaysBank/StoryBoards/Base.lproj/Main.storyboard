@@ -103,23 +103,45 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G4v-LY-1BD">
-                                <rect key="frame" x="20" y="409" width="353" height="24"/>
+                                <rect key="frame" x="20" y="460" width="353" height="24"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="9K4-7E-8ma">
+                                <rect key="frame" x="186.66666666666666" y="200" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WgL-hX-LYO">
+                                <rect key="frame" x="30" y="140" width="333" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="ck3-Ch-aam"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QBv-xP-oAe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="G4v-LY-1BD" firstAttribute="centerY" secondItem="GJa-DS-cGU" secondAttribute="centerY" id="1aa-R2-as7"/>
+                            <constraint firstItem="WgL-hX-LYO" firstAttribute="top" secondItem="QBv-xP-oAe" secondAttribute="top" constant="140" id="6JE-zg-0vi"/>
+                            <constraint firstItem="WgL-hX-LYO" firstAttribute="centerX" secondItem="GJa-DS-cGU" secondAttribute="centerX" id="DMO-eN-rPQ"/>
                             <constraint firstItem="G4v-LY-1BD" firstAttribute="leading" secondItem="QBv-xP-oAe" secondAttribute="leading" constant="20" id="H0z-VN-3tg"/>
+                            <constraint firstItem="9K4-7E-8ma" firstAttribute="centerX" secondItem="GJa-DS-cGU" secondAttribute="centerX" id="LDV-5P-zWA"/>
+                            <constraint firstItem="QBv-xP-oAe" firstAttribute="trailing" secondItem="WgL-hX-LYO" secondAttribute="trailing" constant="30" id="NT0-JY-EVR"/>
                             <constraint firstItem="QBv-xP-oAe" firstAttribute="trailing" secondItem="G4v-LY-1BD" secondAttribute="trailing" constant="20" id="NtB-TI-Ze7"/>
+                            <constraint firstItem="G4v-LY-1BD" firstAttribute="top" secondItem="WgL-hX-LYO" secondAttribute="bottom" constant="20" id="OK6-Lh-Wny"/>
+                            <constraint firstItem="WgL-hX-LYO" firstAttribute="leading" secondItem="QBv-xP-oAe" secondAttribute="leading" constant="30" id="br2-vB-J1O"/>
+                            <constraint firstItem="9K4-7E-8ma" firstAttribute="top" secondItem="QBv-xP-oAe" secondAttribute="top" constant="200" id="qpk-xV-ZRP"/>
                             <constraint firstItem="G4v-LY-1BD" firstAttribute="centerX" secondItem="GJa-DS-cGU" secondAttribute="centerX" id="qyn-ia-g1l"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8Hg-B4-r29"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="9K4-7E-8ma" id="bMX-Te-FF0"/>
+                        <outlet property="imageView" destination="WgL-hX-LYO" id="UGo-40-Jfu"/>
                         <outlet property="infoHolidayLabel" destination="G4v-LY-1BD" id="8Ep-t5-r2A"/>
                     </connections>
                 </viewController>
