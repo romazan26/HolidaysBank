@@ -12,17 +12,20 @@ final class ViewController: UIViewController {
     var holidays: [Holiday] = []
     private let networkManager = NetworkManager.shared
     
+    @IBOutlet var startButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchHoliday()
+        startButton.pulsate()
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let holidayCVC = segue.destination as? HolidayCollectionViewController else {return}
         holidayCVC.holidays = holidays
     }
-    
-
 }
+// MARK: extension ViewController
 extension ViewController {
     private func fetchHoliday() {
         networkManager.fetch([Holiday].self, from: Link.holidayURL.url) { [weak self] result in
@@ -35,5 +38,19 @@ extension ViewController {
             }
         }
         
+    }
+}
+// MARK: UIButton
+extension UIButton {
+    func pulsate() {
+        let pulse = CASpringAnimation(keyPath: "transform.scale")
+        pulse.fromValue = 0.8
+        pulse.toValue = 1
+        pulse.duration = 0.6
+        pulse.autoreverses = true
+        pulse.repeatCount = 10
+        pulse.initialVelocity = 0.5
+        pulse.damping = 5
+        layer.add(pulse, forKey: nil)
     }
 }

@@ -32,6 +32,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="JJb-sl-i7X"/>
+                    <connections>
+                        <outlet property="startButton" destination="vaZ-KW-dwe" id="irK-Qu-J9U"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -31,6 +31,7 @@ final class InfoHolidayViewController: UIViewController {
                 name: \(hoilday.name)
                 """
     }
+    
     private func fetchImage() {
         networkManager.fetchImage(from: Link.newYearURL.url) { [weak self] result in
             switch result {
