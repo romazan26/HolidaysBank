@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Alamofire
 
 final class StartViewController: UIViewController {
 
@@ -29,17 +28,14 @@ final class StartViewController: UIViewController {
 // MARK: extension ViewController
 extension StartViewController {
     private func fetchHoliday() {
-        AF.request(Link.holidayURL.url)
-            .validate()
-            .responseJSON { [weak self] dataResponse in
-                switch dataResponse.result {
-                case .success(let value):
-                    self?.holidays = Holiday.getHolidays(from: value)
-                case .failure(let error):
-                    print(error)
-                    
-                }
-            } 
+        networkManager.fetchHolidays(from: Link.holidayURL.url) { [weak self] result in
+            switch result {
+            case .success(let holidays):
+                self?.holidays = holidays
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
         
     }
 }

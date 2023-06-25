@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Alamofire
 
 enum Link {
     case holidayURL
@@ -52,6 +53,22 @@ final class NetworkManager {
             
         }.resume()
     }
+    func fetchHolidays(from url: URL, completion: @escaping(Result<[Holiday], AFError>) -> Void){
+        AF.request(url)
+            .validate()
+            .responseJSON { dataResponse in
+                switch dataResponse.result {
+                case .success(let value):
+                    let holidays = Holiday.getHolidays(from: value)
+                    completion(.success(holidays))
+                    
+                case .failure(let error):
+                    completion(.failure(error))
+                    
+                }
+            }
+    }
+   
     func fetchImage(from url: URL, completion: @escaping(Result<Data, NetworkError>) -> Void) {
         
         DispatchQueue.global().async {
