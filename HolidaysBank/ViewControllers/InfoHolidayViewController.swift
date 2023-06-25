@@ -9,7 +9,7 @@ import UIKit
 
 final class InfoHolidayViewController: UIViewController {
     var hoilday: Holiday!
-    let networkManager = NetworkManager.shared
+    private let networkManager = NetworkManager.shared
     
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
     @IBOutlet var imageView: UIImageView!
@@ -33,7 +33,7 @@ final class InfoHolidayViewController: UIViewController {
     }
     
     private func fetchImage() {
-        networkManager.fetchImage(from: Link.newYearURL.url) { [weak self] result in
+        networkManager.fetchImage(from: Link.pictureURL.url) { [weak self] result in
             switch result {
             case .success(let imageData):
                 self?.imageView.image = UIImage(data: imageData)

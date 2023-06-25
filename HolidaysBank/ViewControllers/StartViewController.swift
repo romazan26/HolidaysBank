@@ -7,9 +7,9 @@
 
 import UIKit
 
-final class ViewController: UIViewController {
+final class StartViewController: UIViewController {
 
-    var holidays: [Holiday] = []
+    private var holidays: [Holiday] = []
     private let networkManager = NetworkManager.shared
     
     @IBOutlet var startButton: UIButton!
@@ -26,7 +26,7 @@ final class ViewController: UIViewController {
     }
 }
 // MARK: extension ViewController
-extension ViewController {
+extension StartViewController {
     private func fetchHoliday() {
         networkManager.fetch([Holiday].self, from: Link.holidayURL.url) { [weak self] result in
             switch result {
